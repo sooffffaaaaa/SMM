@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SOFIA | SMM</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Caveat:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<style>
+.contact-modal{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(10px);display:flex;justify-content:center;align-items:center;opacity:0;visibility:hidden;transition:.3s;z-index:9999}
+.contact-modal.active{opacity:1;visibility:visible}
+.contact-box{width:360px;max-width:90%;background:linear-gradient(145deg,#171717,#080808);border:1px solid rgba(231,160,184,.25);border-radius:28px;padding:36px 28px;text-align:center;position:relative;box-shadow:0 30px 60px rgba(0,0,0,.55)}
+.contact-close{position:absolute;top:14px;right:18px;background:none;border:none;color:#fff;font-size:30px;cursor:pointer}
+.contact-avatar{width:82px;height:82px;margin:0 auto 18px;border-radius:24px;background:rgba(231,160,184,.12);display:flex;align-items:center;justify-content:center;font-size:36px;border:1px solid rgba(231,160,184,.2)}
+.contact-box h3{font-size:34px;margin:0 0 8px}
+.contact-box p{color:#bdbdbd;margin:0 0 24px}
+.contact-phone{display:block;width:100%;padding:16px;border-radius:18px;background:#E7A0B8;color:#111;text-decoration:none;font-weight:700;font-size:20px;margin-bottom:12px}
+.contact-box span{color:#8a8a8a;font-size:14px}
+</style>
+</head>
+<body>
+<header class="header">
+<a class="logo" href="#">
+<div class="logo-box">SMM</div>
+<span>SOFIA</span>
+</a>
+<nav class="nav">
+<a href="#about">Про мене</a>
+<a href="#services">Послуги</a>
+<a href="#cases">Кейси</a>
+<a href="#reviews">Відгуки</a>
+<a href="#contact">Контакти</a>
+</nav>
+<a class="header-btn" href="#contact">Зв'язатися ↗</a>
+</header>
+<main>
+<section class="hero">
+<div class="hero-decor">
+<div class="sparkle sparkle-1">✦</div>
+<div class="sparkle sparkle-2">✦</div>
+<div class="sparkle sparkle-3">✦</div>
+<div class="bg-word">SMM</div>
+<div class="curve curve-1"></div>
+<div class="curve curve-2"></div>
+</div>
+<div class="hero-left">
+<div class="tag">SMM • MEDIA • MARKETING</div>
+<div class="title-wrap">
+<h1>SOFIA</h1>
+<span class="signature">Sofia</span>
+</div>
+<p class="hero-text">
+Перетворюю соціальні мережі
+на інструмент зростання бізнесу.
+</p>
+<div class="hero-buttons">
+<a class="btn" href="#contact">Обговорити проєкт</a>
+<a class="link" href="#cases">
+Дивитися кейси ↓
+</a>
+</div>
+</div>
+<div class="hero-stats">
+<div class="stat-card">
+<h3>50+</h3>
+<p>проєктів</p>
+</div>
+<div class="stat-card">
+<h3>3 роки</h3>
+<p>в SMM</p>
+</div>
+<div class="stat-card">
+<h3>1000+</h3>
+<p>реалізованих відео</p>
+</div>
+</div>
+<div class="hero-right">
+<div class="glow"></div>
+<div class="photo-frame">
+<img alt="Софія" class="hero-photo" src="images/hero.jpg"/>
+</div>
+</div>
+</section>
+<section class="about" id="about">
+<div class="about-decor">
+<div class="about-circle about-circle-1"></div>
+<div class="about-circle about-circle-2"></div>
+<div class="about-circle about-circle-3"></div>
+</div>
+<div class="about-main-photo">
+<img alt="Софія" src="images/about-main.jpg"/>
+</div>
+<div class="about-content">
+<div class="about-tag">ПРО МЕНЕ ✦</div>
+<h2>Я створюю контент, який працює на ваш бізнес</h2>
+<p>
+Допомагаю брендам виділитися в стрічці,
+залучати свою аудиторію та перетворювати
+підписників на клієнтів.
+</p>
+<p>
+Працюю комплексно: стратегія, контент,
+Reels, таргетована реклама та аналітика.
+Для мене важливий не просто красивий профіль,
+а реальний результат, який можна виміряти.
+</p>
+<p>
+Люблю свою справу й вкладаю в кожен проєкт
+максимум уваги та енергії.
+</p>
+<div class="about-badges">
+<span>🎥 Reels</span>
+<span>📊 Стратегія</span>
+<span>🚀 Результат</span>
+</div>
+<span class="about-sign">Sofia</span>
+<div class="about-roles">
+<span>SMM Specialist</span>
+<span>Content Strategist</span>
+<span>Reels Creator</span>
+</div>
+</div>
+<div class="about-gallery">
+<div class="mini-photo">
+<img alt="" src="images/about-1.svg"/>
+</div>
+<div class="mini-photo">
+<img alt="" src="images/about-2.svg"/>
+</div>
+<div class="mini-photo">
+<img alt="" src="images/about-3.svg"/>
+</div>
+<div class="mini-photo">
+<img alt="" src="images/about-4.svg"/>
+</div>
+<div class="about-tip">
+<h4>Чому обирають мене</h4>
+<ul>
+<li>Індивідуальний підхід</li>
+<li>Контент із сенсом</li>
+<li>Фокус на результат</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="services" id="services">
+<div class="services-head">
+<div class="services-tag">ПОСЛУГИ ✦</div>
+<h2>Що я можу зробити для вашого бренду</h2>
+</div>
+<div class="services-grid">
+<article class="service-card"><div class="service-header"></div><div class="service-icon">🎥</div><h3>Зйомка рекламних відео</h3><p>Рекламні ролики для Instagram і TikTok — від ідеї до готового монтажу.</p><span class="service-pill">Одне відео або пакет</span><a class="service-btn open-contact" href="javascript:void(0)">Детальніше →</a></article>
+<article class="service-card"><div class="service-header"></div><div class="service-icon">📱</div><h3>Ведення Instagram</h3><p>Контент-план, Reels, Stories та оформлення профілю в єдиному стилі.</p><span class="service-pill">Повне ведення</span><a class="service-btn open-contact" href="javascript:void(0)">Детальніше →</a></article>
+<article class="service-card"><div class="service-header"></div><div class="service-icon">🎯</div><h3>Таргетована реклама</h3><p>Запуск і оптимізація реклами в Instagram та Facebook.</p><span class="service-pill">Meta Ads</span><a class="service-btn open-contact" href="javascript:void(0)">Детальніше →</a></article>
+</div>
+</section>
+<section class="cases" id="cases">
+<div class="cases-head">
+<div class="cases-tag">КЕЙСИ ✦</div>
+<h2>Відео, які працюють на результат</h2>
+<p>Оберіть напрямок і перегляньте приклади робіт.</p>
+</div>
+<div class="cases-tabs">
+<button class="case-tab active" data-case="zaklad">РЕСТОРАНИ ТА КАФЕ</button>
+<button class="case-tab" data-case="sport">СПОРТ ТА ФІТНЕС</button>
+<button class="case-tab" data-case="beauty">САЛОНИ КРАСИ</button>
+<button class="case-tab" data-case="barber">БАРБЕРШОПИ</button>
+</div>
+<div class="case-video active" id="zaklad">
+
+<div class="phone-frame"><div class="phone-notch"></div><video autoplay="" class="case-player" controls="" loop="" muted="" playsinline="">
+<source src="images/zaklad.mp4" type="video/mp4"/>
+</video></div></div>
+<div class="case-video" id="sport">
+
+<div class="phone-frame"><div class="phone-notch"></div><video autoplay="" class="case-player" controls="" loop="" muted="" playsinline="">
+<source src="images/sport.mp4" type="video/mp4"/>
+</video></div></div>
+<div class="case-video" id="beauty">
+
+<div class="phone-frame"><div class="phone-notch"></div><video autoplay="" class="case-player" controls="" loop="" muted="" playsinline="">
+<source src="images/beauty.mp4" type="video/mp4"/>
+</video></div></div>
+<div class="case-video" id="barber">
+
+<div class="phone-frame"><div class="phone-notch"></div><video autoplay="" class="case-player" controls="" loop="" muted="" playsinline="">
+<source src="images/barber.mp4" type="video/mp4"/>
+</video></div></div>
+</section>
+<section class="reviews" id="reviews">
+  <div class="container">
+
+    <span class="section-label">ВІДГУКИ ✦</span>
+    <h2>Клієнти говорять краще за рекламу</h2>
+    <p class="section-subtitle">
+      Реальні повідомлення після здачі готових робіт.
+    </p>
+
+    <div class="reviews-grid">
+
+      <div class="review-card"><img src="images/review-1.jpg" alt=""></div>
+      <div class="review-card"><img src="images/review-2.jpg" alt=""></div>
+      <div class="review-card"><img src="images/review-3.jpg" alt=""></div>
+      <div class="review-card"><img src="images/review-4.jpg" alt=""></div>
+      <div class="review-card"><img src="images/review-5.jpg" alt=""></div>
+      <div class="review-card"><img src="images/review-6.jpg" alt=""></div>
+      <div class="review-card"><img src="images/review-7.jpg" alt=""></div>
+      <div class="review-card"><img src="images/review-8.jpg" alt=""></div>
+      <div class="review-card"><img src="images/review-9.jpg" alt=""></div>
+      <div class="review-card"><img src="images/review-10.jpg" alt=""></div>
+      <div class="review-card"><img src="images/review-11.jpg" alt=""></div>
+      <div class="review-card"><img src="images/review-12.jpg" alt=""></div>
+      <div class="review-card"><img src="images/review-13.jpg" alt=""></div>
+      <div class="review-card"><img src="images/review-14.jpg" alt=""></div>
+      <div class="review-card"><img src="images/review-15.jpg" alt=""></div>
+
+    </div>
+
+  </div>
+</section>
+</section>
+<section class="contact" id="contact">
+    <div class="container">
+
+        <span class="section-label">КОНТАКТИ ✦</span>
+
+        <h2>Зв'яжіться зі мною</h2>
+
+        <p class="section-subtitle">
+            Оберіть зручний спосіб зв'язку.
+        </p>
+
+        <div class="contact-grid">
+
+            <a href="tel:+380660835038" class="contact-card">
+                <div class="contact-icon">📞</div>
+                <h3>Телефон</h3>
+                <span>+380660835038</span>
+            </a>
+
+            <a href="https://www.instagram.com/_sooffffaaaaa._?stkn=aTI4a3M5NTlpYmpw" target="_blank" class="contact-card">
+                <div class="contact-icon">📷</div>
+                <h3>Instagram</h3>
+                <span>@_sooffffaaaaa._</span>
+            </a>
+
+            <a href="https://t.me/sofaaaaab" target="_blank" class="contact-card">
+                <div class="contact-icon">✈️</div>
+                <h3>Telegram</h3>
+                <span>Софа</span>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+</section>
+</section>
+</main>
+<div class="contact-modal" id="contactModal">
+<div class="contact-modal-box">
+<button class="contact-close">×</button>
+<div class="contact-avatar">👋</div>
+<h3>Sofia</h3>
+<p>SMM Specialist</p>
+<a class="contact-phone" href="tel:+380660835038">+380660835038</a>
+<span>Натисніть, щоб подзвонити</span>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
