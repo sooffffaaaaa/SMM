@@ -489,7 +489,7 @@ footer,.footer,.site-footer{display:none!important;height:0!important;min-height
 /* Mobile hero: full author face */
 @media(max-width:560px){
   .hero-media picture{position:absolute;inset:0;overflow:hidden}
-  .hero-media img{object-position:50% 38%;}
+  .hero-media img{object-position:75% 38%;}
   .hero-shade{background:linear-gradient(90deg,rgba(0,0,0,.68) 0%,rgba(0,0,0,.38) 45%,rgba(0,0,0,.06) 100%)}
 }
 
