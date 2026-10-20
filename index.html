@@ -1,248 +1,636 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Мобільний відеомейкер — практичний міні-курс із відеомейкінгу з навчанням у Telegram-боті, тестами, домашніми завданнями та супроводженням 7 днів.">
-  <title>Мобільний відеомейкер</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Мобільний відеомейкер — міні-курс зйомки та монтажу на телефон</title>
+  <meta name="description" content="Мобільний відеомейкер — практичний міні-курс: навчись знімати й монтувати контент на телефон і перетвори це на дохід. 6 уроків у Telegram-боті, тести, домашні завдання та 7 днів підтримки.">
+  <meta name="theme-color" content="#0d0a0e">
+  <link rel="canonical" href="https://sooffffaaaaa.github.io/SMM/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:url" content="https://sooffffaaaaa.github.io/SMM/">
+  <meta property="og:title" content="Мобільний відеомейкер — міні-курс">
+  <meta property="og:description" content="Знімай, монтуй і заробляй на контенті з телефона. 6 уроків, Telegram-бот, 7 днів підтримки. 890 ₴ замість 4490 ₴.">
+  <meta property="og:image" content="https://sooffffaaaaa.github.io/SMM/images/hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230d0a0e'/%3E%3Ccircle cx='32' cy='32' r='13' fill='%23ff3d9a'/%3E%3C/svg%3E">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/hero.jpg" media="(min-width: 768px)">
+  <link rel="preload" as="image" href="images/hero-mobile.jpg" media="(max-width: 767px)">
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Мобільний відеомейкер",
+    "description": "Практичний міні-курс зйомки та монтажу контенту на телефон: 6 уроків у Telegram-боті, тести, домашні завдання та 7 днів підтримки.",
+    "inLanguage": "uk",
+    "provider": {
+      "@type": "Organization",
+      "name": "Мобільний відеомейкер",
+      "sameAs": ["https://www.instagram.com/sofia.bugrova_/", "https://t.me/sofaaaaab"]
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "890",
+      "priceCurrency": "UAH",
+      "url": "https://secure.wayforpay.com/payment/_sooffffaaaaa._",
+      "availability": "https://schema.org/InStock",
+      "validThrough": "2026-10-31T23:59:59+02:00"
+    },
+    "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online" }
+  }
+  </script>
 </head>
 
 <body>
-  <div class="noise"></div>
+  <!-- Іконки -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="igGradient" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFD600"/><stop offset=".42" stop-color="#FF7A00"/><stop offset=".7" stop-color="#E1306C"/><stop offset="1" stop-color="#833AB4"/>
+      </linearGradient>
+    </defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 5.5 19.5 12 13 18.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v15M5.5 13 12 19.5 18.5 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-call" viewBox="0 0 24 24"><path d="M6.6 3.5 9.2 3c.7-.1 1.3.3 1.5 1l1.1 3.1c.2.5 0 1.1-.4 1.4L9.7 10a13.2 13.2 0 0 0 4.3 4.3l1.5-1.7c.4-.4.9-.6 1.4-.4l3.1 1.1c.7.2 1.1.8 1 1.5l-.5 2.6c-.1.7-.7 1.2-1.4 1.2C11.2 18.6 5.4 12.8 5.4 5c0-.7.5-1.3 1.2-1.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-tg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#2AABEE"/><path d="m17.7 6.8-2.2 10.3c-.2.7-.6.9-1.2.6l-3.3-2.5-1.6 1.5c-.2.2-.4.4-.8.4l.3-3.4 6.2-5.6c.3-.3-.1-.4-.5-.1L6.9 13l-3.2-1c-.7-.2-.7-.7.1-1l12.5-4.9c.6-.2 1.6.1 1.4.7Z" fill="#fff"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect width="24" height="24" rx="7" fill="url(#igGradient)"/><rect x="6" y="6" width="12" height="12" rx="3.5" fill="none" stroke="#fff" stroke-width="1.7"/><circle cx="12" cy="12" r="3" fill="none" stroke="#fff" stroke-width="1.7"/><circle cx="16.7" cy="7.5" r="1" fill="#fff"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 1.5c.7 5.6 2.6 8 10.5 10.5-7.9 2.5-9.8 4.9-10.5 10.5-.7-5.6-2.6-8-10.5-10.5C9.4 9.5 11.3 7.1 12 1.5Z" fill="currentColor"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.2v13.6c0 .8.9 1.3 1.6.8l10.2-6.8c.6-.4.6-1.2 0-1.6L9.6 4.4C8.9 3.9 8 4.4 8 5.2Z" fill="currentColor"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M2.5 9.5h19M6.5 15h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3.5 2.8 10.6c-.9.4-.9 1.6 0 1.9l4.5 1.5 1.7 5.4c.3.8 1.3 1 1.9.4l2.5-2.4 4.5 3.3c.7.5 1.6.1 1.8-.7L22.4 4.8c.2-.9-.6-1.6-1.4-1.3ZM7.3 14l9.9-6.6-7.4 7.7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="13.5" height="13" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 10.2 4.4-2.6c.5-.3 1.1.1 1.1.6v7.6c0 .6-.6.9-1.1.6L16 13.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5.5h16a1.5 1.5 0 0 1 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5H10l-4.5 3.5v-3.5H4A1.5 1.5 0 0 1 2.5 16V7A1.5 1.5 0 0 1 4 5.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M7.5 10h9M7.5 13.5h5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10.5 18.5h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="15" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="9" cy="17" r="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  </svg>
 
-  <header class="hero">
-    <nav class="nav container">
-      <a class="logo" href="#">МВ<span>.</span></a>
-      <a class="nav-link" href="#price">ПРОГРАМА</a>
-    </nav>
+  <a class="skip-link" href="#main">Перейти до змісту</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
-    <div class="hero-media">
-      <img class="hero-media-desktop" src="images/hero.jpg" alt="">
-      <img class="hero-media-mobile" src="images/hero-mobile-right.jpg" onerror="this.onerror=null;this.src='images/hero-mobile.jpg';" alt="">
-    </div>
-
-    <div class="hero-shade"></div>
-
-    <div class="hero-content container">
-      <div class="eyebrow">МІНІ-КУРС • 6 УРОКІВ • TELEGRAM-БОТ</div>
-      <h1>МОБІЛЬНИЙ<br><em>ВІДЕОМЕЙКЕР</em></h1>
-      <p class="hero-copy">
-        Навчись знімати, монтувати та створювати контент на телефон,
-        який можна перетворити на реальний навик і перші замовлення.
-      </p>
-
-      <div class="hero-price-row">
-        <div class="hero-price" aria-label="Вартість курсу">
-          <span class="hero-price-old">4490 грн</span>
-          <span class="hero-price-new">890 грн</span>
-        </div>
-        <div class="promo-timer" aria-label="Таймер завершення акції">
-          <span class="promo-timer-label">АКЦІЯ ЗАКІНЧУЄТЬСЯ ЧЕРЕЗ</span>
-          <span class="promo-timer-value" id="promoTimer">00:00:00</span>
-        </div>
-      </div>
-
-      <div class="hero-actions">
-        <a class="btn btn-pink" href="https://secure.wayforpay.com/payment/_sooffffaaaaa._" target="_blank" rel="noopener">
-          ОТРИМАТИ КУРС
-        </a>
-        <a class="round-btn" href="#faq" aria-label="До частих запитань">↓</a>
-      </div>
-      <div class="hero-contact-links" aria-label="Контакти">
-        <a class="contact-item" href="tel:+380662175991">
-          <span class="contact-icon phone-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.6 3.5 9.2 3c.7-.1 1.3.3 1.5 1l1.1 3.1c.2.5 0 1.1-.4 1.4L9.7 10a13.2 13.2 0 0 0 4.3 4.3l1.5-1.7c.4-.4.9-.6 1.4-.4l3.1 1.1c.7.2 1.1.8 1 1.5l-.5 2.6c-.1.7-.7 1.2-1.4 1.2C11.2 18.6 5.4 12.8 5.4 5c0-.7.5-1.3 1.2-1.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-          <span>+380 66 217 59 91</span>
-        </a>
-
-        <a class="contact-item" href="https://t.me/sofaaaaab" target="_blank" rel="noopener">
-          <span class="contact-icon telegram-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="12" fill="#2AABEE"/>
-              <path d="m17.7 6.8-2.2 10.3c-.2.7-.6.9-1.2.6l-3.3-2.5-1.6 1.5c-.2.2-.4.4-.8.4l.3-3.4 6.2-5.6c.3-.3-.1-.4-.5-.1L6.9 13l-3.2-1c-.7-.2-.7-.7.1-1l12.5-4.9c.6-.2 1.6.1 1.4.7Z" fill="#fff"/>
-            </svg>
-          </span>
-          <span>@sofaaaaab</span>
-        </a>
-
-        <a class="contact-item" href="https://www.instagram.com/sofia.bugrova_/" target="_blank" rel="noopener">
-          <span class="contact-icon instagram-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="heroIgGradient" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#FFD600"/>
-                  <stop offset=".42" stop-color="#FF7A00"/>
-                  <stop offset=".7" stop-color="#E1306C"/>
-                  <stop offset="1" stop-color="#833AB4"/>
-                </linearGradient>
-              </defs>
-              <rect width="24" height="24" rx="7" fill="url(#heroIgGradient)"/>
-              <rect x="6" y="6" width="12" height="12" rx="3.5" fill="none" stroke="#fff" stroke-width="1.7"/>
-              <circle cx="12" cy="12" r="3" fill="none" stroke="#fff" stroke-width="1.7"/>
-              <circle cx="16.7" cy="7.5" r="1" fill="#fff"/>
-            </svg>
-          </span>
-          <span>@sofia.bugrova_</span>
-        </a>
+  <!-- ============ HEADER ============ -->
+  <header class="header" data-header>
+    <div class="promo-bar">
+      <div class="container promo-bar__inner">
+        <span class="promo-bar__rec" aria-hidden="true"></span>
+        <span><b>−80%</b><span class="hide-sm"> · 890 ₴ замість 4490 ₴</span></span>
+        <span class="promo-bar__sep" aria-hidden="true">/</span>
+        <span>до кінця акції <b class="promo-bar__time" data-timer>11д 00:00:00</b></span>
       </div>
     </div>
 
+    <div class="nav-wrap">
+      <nav class="nav container" aria-label="Головна навігація">
+        <a class="logo" href="#top" aria-label="Мобільний відеомейкер — на початок">
+          <span class="logo__rec" aria-hidden="true"></span><span>МВ<span class="logo__dot">.</span></span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="#about">Про курс</a></li>
+          <li><a href="#for">Для кого</a></li>
+          <li><a href="#program">Програма</a></li>
+          <li><a href="#price">Ціна</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a class="btn btn--pink btn--sm nav__cta" href="https://secure.wayforpay.com/payment/_sooffffaaaaa._" target="_blank" rel="noopener">Купити курс</a>
+        <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Відкрити меню" data-burger>
+          <span></span><span></span>
+        </button>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="intro section-light">
-      <div class="container intro-compact">
-        <div class="intro-copy">
-          <p class="mega-copy">
-            ТВІЙ <span>ТЕЛЕФОН</span><br>
-            МОЖЕ БІЛЬШЕ,<br>
-            НІЖ ТИ ДУМАЄШ.
-          </p>
+  <div class="menu" id="menu" data-menu>
+    <ul class="menu__links">
+      <li><a href="#about">Про курс</a></li>
+      <li><a href="#for">Для кого</a></li>
+      <li><a href="#program">Програма</a></li>
+      <li><a href="#format">Навчання</a></li>
+      <li><a href="#price">Ціна</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn--pink btn--lg btn--block" href="https://secure.wayforpay.com/payment/_sooffffaaaaa._" target="_blank" rel="noopener">
+      Отримати курс за 890 ₴ <svg class="btn__icon"><use href="#i-arrow"/></svg>
+    </a>
+    <ul class="contacts contacts--stack">
+      <li><a class="contact" href="tel:+380662175991"><svg class="contact__icon contact__icon--call"><use href="#i-call"/></svg>+380 66 217 59 91</a></li>
+      <li><a class="contact" href="https://t.me/sofaaaaab" target="_blank" rel="noopener"><svg class="contact__icon"><use href="#i-tg"/></svg>@sofaaaaab</a></li>
+      <li><a class="contact" href="https://www.instagram.com/sofia.bugrova_/" target="_blank" rel="noopener"><svg class="contact__icon"><use href="#i-ig"/></svg>@sofia.bugrova_</a></li>
+    </ul>
+  </div>
 
-          <p class="body-copy">
-            «Мобільний відеомейкер» — короткий практичний курс для тих,
-            хто хоче навчитися створювати контент на телефон та зрозуміти,
-            як поступово перетворити цей навик на дохід.
-          </p>
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" data-hero>
+      <div class="hero__media">
+        <picture>
+          <source media="(max-width: 767px)" srcset="images/hero-mobile.jpg">
+          <img src="images/hero.jpg" alt="" width="1920" height="1080" fetchpriority="high">
+        </picture>
+      </div>
+      <div class="hero__shade" aria-hidden="true"></div>
+
+      <div class="vf" aria-hidden="true">
+        <i class="vf__c vf__c--tl"></i><i class="vf__c vf__c--tr"></i><i class="vf__c vf__c--bl"></i><i class="vf__c vf__c--br"></i>
+        <div class="vf__hud vf__hud--tl"><span class="rec-dot"></span>REC <span data-timecode>00:00:00:00</span></div>
+        <div class="vf__hud vf__hud--tr">4K · 30 FPS · 9:16</div>
+        <div class="vf__hud vf__hud--bl">ISO 100 · 1/60 · AF-C</div>
+        <div class="vf__hud vf__hud--br">
+          <span>100%</span>
+          <svg class="battery" viewBox="0 0 28 14"><rect x=".75" y=".75" width="23.5" height="12.5" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="3" width="19" height="8" rx="1.5" fill="currentColor"/><rect x="25.5" y="4.5" width="2" height="5" rx="1" fill="currentColor"/></svg>
+        </div>
+      </div>
+
+      <div class="container hero__content">
+        <p class="eyebrow hero__anim" style="--i:0">Міні-курс · 6 уроків · Telegram-бот</p>
+        <h1 class="hero__title display">
+          <span class="hero__line hero__anim" style="--i:1">Мобільний</span>
+          <span class="hero__line hero__line--pink hero__anim" style="--i:2">відеомейкер</span>
+        </h1>
+        <p class="hero__lead hero__anim" style="--i:3">
+          Навчись знімати, монтувати та створювати контент на телефон —
+          і перетвори це на реальний навик та перші замовлення.
+        </p>
+
+        <div class="offer hero__anim" style="--i:4">
+          <div class="price" aria-label="Вартість курсу: 890 гривень замість 4490">
+            <s class="price__old">4490 ₴</s>
+            <span class="price__new">890 ₴</span>
+            <span class="price__badge">−80%</span>
+          </div>
+          <div class="timer" aria-label="Час до завершення акції">
+            <span class="timer__label">Акція закінчується через</span>
+            <span class="timer__value" data-timer-seg>
+              <span><b data-d>00</b><i>дн</i></span>
+              <span><b data-h>00</b><i>год</i></span>
+              <span><b data-m>00</b><i>хв</i></span>
+              <span><b data-s>00</b><i>с</i></span>
+            </span>
+          </div>
         </div>
 
-        <div class="intro-visual">
-          <img src="images/about-course-full.jpg" alt="Монтаж відео та результат доходу 44 500 грн">
+        <div class="hero__actions hero__anim" style="--i:5">
+          <a class="btn btn--pink btn--lg" href="https://secure.wayforpay.com/payment/_sooffffaaaaa._" target="_blank" rel="noopener">
+            Отримати курс <svg class="btn__icon"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="#program">
+            Програма <svg class="btn__icon btn__icon--down"><use href="#i-down"/></svg>
+          </a>
+        </div>
+
+        <ul class="contacts hero__anim" style="--i:6">
+          <li><a class="contact" href="tel:+380662175991"><svg class="contact__icon contact__icon--call"><use href="#i-call"/></svg>+380 66 217 59 91</a></li>
+          <li><a class="contact" href="https://t.me/sofaaaaab" target="_blank" rel="noopener"><svg class="contact__icon"><use href="#i-tg"/></svg>@sofaaaaab</a></li>
+          <li><a class="contact" href="https://www.instagram.com/sofia.bugrova_/" target="_blank" rel="noopener"><svg class="contact__icon"><use href="#i-ig"/></svg>@sofia.bugrova_</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ TICKER ============ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__band">
+        <div class="ticker__track">
+          <div class="ticker__group">
+            <span>Знімай</span><svg><use href="#i-star"/></svg>
+            <span>Монтуй</span><svg><use href="#i-star"/></svg>
+            <span>Створюй контент</span><svg><use href="#i-star"/></svg>
+            <span>Заробляй</span><svg><use href="#i-star"/></svg>
+          </div>
+          <div class="ticker__group">
+            <span>Знімай</span><svg><use href="#i-star"/></svg>
+            <span>Монтуй</span><svg><use href="#i-star"/></svg>
+            <span>Створюй контент</span><svg><use href="#i-star"/></svg>
+            <span>Заробляй</span><svg><use href="#i-star"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section section--paper about" id="about">
+      <div class="container about__grid">
+        <div class="about__text">
+          <p class="eyebrow" data-reveal><b>01</b> Про курс</p>
+          <h2 class="display h2" data-reveal style="--d:1">
+            Твій <span class="pink">телефон</span><br>може більше,<br>ніж ти думаєш.
+          </h2>
+          <p class="lead" data-reveal style="--d:2">
+            «Мобільний відеомейкер» — короткий практичний курс для тих, хто хоче навчитися
+            створювати контент на телефон і зрозуміти, як поступово перетворити цей навик на дохід.
+          </p>
+          <p class="muted" data-reveal style="--d:3">
+            Без дорогої техніки й місяців теорії — лише те, що працює в реальних зйомках.
+          </p>
+
+          <dl class="stats" data-reveal style="--d:4">
+            <div class="stat"><dt><span data-count="6">6</span></dt><dd>уроків із тестами та домашніми завданнями</dd></div>
+            <div class="stat"><dt><span data-count="7">7</span></dt><dd>днів супроводу та зворотного зв'язку</dd></div>
+            <div class="stat"><dt><span data-count="1">1</span></dt><dd>смартфон — усе, що потрібно для старту</dd></div>
+          </dl>
+        </div>
+
+        <div class="about__visual" data-reveal style="--d:2">
+          <img src="images/about-course-full.jpg" alt="Монтаж відео на телефоні та результат доходу +44 500 грн" width="1612" height="976" loading="lazy">
+          <svg class="spin-badge" viewBox="0 0 200 200" aria-hidden="true">
+            <defs><path id="badgeCircle" d="M100 100m-74 0a74 74 0 1 1 148 0a74 74 0 1 1-148 0"/></defs>
+            <circle cx="100" cy="100" r="98" class="spin-badge__bg"/>
+            <g class="spin-badge__ring">
+              <text><textPath href="#badgeCircle" textLength="462">ЗНІМАЙ • МОНТУЙ • ЗАРОБЛЯЙ • </textPath></text>
+            </g>
+            <circle cx="100" cy="100" r="30" class="spin-badge__dot"/>
+            <path d="M93 86v28l22-14z" class="spin-badge__play"/>
+          </svg>
         </div>
       </div>
     </section>
-<section id="price" class="price section-light">
-      <div class="container price-premium">
-        <div class="price-copy">
-          <div class="section-index">  </div>
-          <h2>ПОЧНИ<br><em>ЗАРАЗ.</em></h2>
 
-          <div class="price-features">
-            <span><b></b> 6 уроків</span>
-            <span><b></b> домашні завдання</span>
-            <span><b></b> 7 днів підтримки</span>
+    <!-- ============ FOR WHOM ============ -->
+    <section class="section section--dark" id="for">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow" data-reveal><b>02</b> Для кого</p>
+            <h2 class="display h2" data-reveal style="--d:1">Курс для тебе,<br><span class="pink">якщо ти…</span></h2>
           </div>
-
-          <a class="video-link-btn" href="https://secure.wayforpay.com/payment/_sooffffaaaaa._" target="_blank" rel="noopener">
-              ПЕРЕЙТИ ЗА ПОСИЛАННЯМ
-            </a>
+          <p class="muted section-head__note" data-reveal style="--d:2">
+            Досвід, дорога камера чи навички монтажу не потрібні. Достатньо телефона, який уже є в кишені.
+          </p>
         </div>
 
-        <div class="course-video-wrap">
-          <div class="phone-video-stack">
-            <div class="phone-mockup" aria-label="Відео курсу на екрані смартфона">
-              <div class="phone-speaker"></div>
-              <div class="phone-screen">
-                <video class="course-video" controls playsinline preload="none" poster="images/about-course-full.jpg">
-                  <source src="images/course-video.mp4" type="video/mp4">
-                  Ваш браузер не підтримує відтворення відео.
-                </video>
+        <ul class="cards">
+          <li class="card" data-reveal style="--d:0">
+            <span class="card__num">01</span>
+            <h3>Починаєш з нуля</h3>
+            <p>Хочеш знімати красиво, але не знаєш, з чого почати. Розберемо все покроково — від налаштувань камери до готового ролика.</p>
+          </li>
+          <li class="card" data-reveal style="--d:1">
+            <span class="card__num">02</span>
+            <h3>Ведеш блог</h3>
+            <p>Хочеш, щоб Reels і сторіз виглядали якісно, утримували увагу та працювали на твій особистий бренд.</p>
+          </li>
+          <li class="card" data-reveal style="--d:2">
+            <span class="card__num">03</span>
+            <h3>Маєш бізнес чи експертність</h3>
+            <p>Хочеш створювати контент для свого проєкту самостійно — без підрядників і зайвих витрат.</p>
+          </li>
+          <li class="card" data-reveal style="--d:3">
+            <span class="card__num">04</span>
+            <h3>Шукаєш підробіток</h3>
+            <p>Хочеш опанувати мобільний відеомейкінг як професію та брати перші замовлення на зйомку й монтаж.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PROGRAM ============ -->
+    <!-- ЧЕРНЕТКА: назви та описи уроків — приклад. Замініть на реальну програму курсу. -->
+    <section class="section section--paper" id="program">
+      <div class="container program">
+        <div class="program__aside">
+          <p class="eyebrow" data-reveal><b>03</b> Програма</p>
+          <h2 class="display h2" data-reveal style="--d:1">6 уроків.<br><span class="pink">Від кадру до замовлення.</span></h2>
+          <p class="muted" data-reveal style="--d:2">
+            Після кожного уроку — тест і домашнє завдання, щоб одразу закріпити навик на практиці.
+          </p>
+
+          <div class="editor" data-reveal style="--d:3" aria-hidden="true">
+            <div class="editor__bar">
+              <span class="rec-dot"></span>
+              <span class="editor__file">mobile_videomaker.mp4</span>
+              <span class="editor__tc" data-editor-tc>00:00 / 01:00</span>
+            </div>
+            <div class="editor__ruler"><span>00:00</span><span>00:15</span><span>00:30</span><span>00:45</span><span>01:00</span></div>
+            <div class="editor__tracks" data-editor>
+              <div class="track track--video">
+                <span class="clip" style="--w:15">01</span>
+                <span class="clip" style="--w:17">02</span>
+                <span class="clip" style="--w:16">03</span>
+                <span class="clip" style="--w:19">04</span>
+                <span class="clip" style="--w:17">05</span>
+                <span class="clip" style="--w:16">06</span>
               </div>
+              <div class="track track--text">
+                <span class="tclip" style="--l:4;--w:26">T · Субтитри</span>
+                <span class="tclip" style="--l:48;--w:30">T · Заголовок</span>
+              </div>
+              <div class="track track--audio" data-wave></div>
+              <span class="playhead"></span>
             </div>
           </div>
         </div>
+
+        <ol class="lessons">
+          <li class="lesson" data-lesson>
+            <div class="lesson__num">Урок<b>01</b></div>
+            <div class="lesson__body">
+              <h3>Телефон — твоя камера</h3>
+              <p>Налаштування камери, формати й роздільна здатність, стабілізація. Як отримати максимум із будь-якого смартфона.</p>
+              <ul class="tags"><li>Відеоурок</li><li>Тест</li><li>ДЗ</li></ul>
+            </div>
+          </li>
+          <li class="lesson" data-lesson>
+            <div class="lesson__num">Урок<b>02</b></div>
+            <div class="lesson__body">
+              <h3>Кадр і композиція</h3>
+              <p>Плани, ракурси, правило третин і рух камери. Як знімати так, щоб від кадру було складно відвести погляд.</p>
+              <ul class="tags"><li>Відеоурок</li><li>Тест</li><li>ДЗ</li></ul>
+            </div>
+          </li>
+          <li class="lesson" data-lesson>
+            <div class="lesson__num">Урок<b>03</b></div>
+            <div class="lesson__body">
+              <h3>Світло та звук</h3>
+              <p>Природне й штучне світло, зйомка ввечері та в приміщенні, чистий звук без дорогого мікрофона.</p>
+              <ul class="tags"><li>Відеоурок</li><li>Тест</li><li>ДЗ</li></ul>
+            </div>
+          </li>
+          <li class="lesson" data-lesson>
+            <div class="lesson__num">Урок<b>04</b></div>
+            <div class="lesson__body">
+              <h3>Монтаж на телефоні</h3>
+              <p>Склейка, ритм під музику, переходи, субтитри та кольорокорекція в мобільних застосунках.</p>
+              <ul class="tags"><li>Відеоурок</li><li>Тест</li><li>ДЗ</li></ul>
+            </div>
+          </li>
+          <li class="lesson" data-lesson>
+            <div class="lesson__num">Урок<b>05</b></div>
+            <div class="lesson__body">
+              <h3>Контент, який дивляться</h3>
+              <p>Хук у перші секунди, сценарій і структура Reels, тренди та обкладинки, що допомагають набирати охоплення.</p>
+              <ul class="tags"><li>Відеоурок</li><li>Тест</li><li>ДЗ</li></ul>
+            </div>
+          </li>
+          <li class="lesson" data-lesson>
+            <div class="lesson__num">Урок<b>06</b></div>
+            <div class="lesson__body">
+              <h3>Від навику до доходу</h3>
+              <p>Портфоліо, формування ціни, де шукати перших клієнтів і як вибудувати роботу із замовником.</p>
+              <ul class="tags"><li>Відеоурок</li><li>Тест</li><li>ДЗ</li></ul>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section id="faq" class="faq section-light">
-      <div class="container">
-        <div class="section-index">  FAQ</div>
-        <h2>ЧАСТІ<br><em>ЗАПИТАННЯ.</em></h2>
+    <!-- ============ AUTHOR ============ -->
+    <!-- ЧЕРНЕТКА: доповніть блок реальними фактами про себе (досвід, клієнти, цифри). -->
+    <section class="section section--dark" id="author">
+      <div class="container author">
+        <div class="author__photo" data-reveal>
+          <img src="images/hero-mobile.jpg" alt="Авторка курсу «Мобільний відеомейкер»" width="724" height="1288" loading="lazy">
+          <div class="af" aria-hidden="true"><i></i><i></i><i></i><i></i><span>AF · FACE</span></div>
+          <div class="author__rec" aria-hidden="true"><span class="rec-dot"></span>REC</div>
+        </div>
 
-        <div class="faq-list">
-          <details open><summary>Чи підійде курс новачку?</summary><p>Так. Курс побудований як послідовний старт у мобільному відеомейкінгу.</p></details>
-          <details><summary>Скільки уроків у курсі?</summary><p>6 уроків із тестами та домашніми завданнями.</p></details>
-          <details><summary>Де проходить навчання?</summary><p>Матеріали та навчальна взаємодія організовані через Telegram-бота.</p></details>
-          <details><summary>Чи буде підтримка?</summary><p>Так, передбачено 7 днів супроводження.</p></details>
+        <div class="author__text">
+          <p class="eyebrow" data-reveal><b>04</b> Хто веде курс</p>
+          <h2 class="display h2" data-reveal style="--d:1">Камера вже<br><span class="pink">у тебе в руках.</span></h2>
+          <p class="lead" data-reveal style="--d:2">
+            Привіт! Я створюю відеоконтент на телефон — і в цьому курсі ділюся всім, що працює на практиці:
+            як бачити кадр, працювати зі світлом, монтувати динамічні ролики та знаходити перших клієнтів.
+          </p>
+
+          <ul class="points" data-reveal style="--d:3">
+            <li><b>01</b><span>Практика замість теорії — кожен урок закінчується завданням</span></li>
+            <li><b>02</b><span>Зрозуміло навіть з нуля — без складних термінів і програм</span></li>
+            <li><b>03</b><span>7 днів супроводу — жодне запитання не залишиться без відповіді</span></li>
+          </ul>
+
+          <a class="btn btn--ghost" href="https://www.instagram.com/sofia.bugrova_/" target="_blank" rel="noopener" data-reveal style="--d:4">
+            <svg class="btn__icon btn__icon--ig"><use href="#i-ig"/></svg> Мої роботи в Instagram
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="final section-dark">
-      <div class="container final-inner">
-        <div class="section-index"> </div>
-        <h2>МОЖНА ЩЕ<br><em>ДИВИТИСЯ.</em></h2>
-        <p>А можна <span class="final-accent">вже почати знімати.</span></p>
-        <a class="btn btn-pink big-btn" href="https://secure.wayforpay.com/payment/_sooffffaaaaa._" target="_blank" rel="noopener">
-          ХОЧУ НА КУРС ЗА 890 ₴
-        </a>
-        <div class="contact-block">
-          <div class="contact-title">КОНТАКТИ</div>
-          <div class="contact-links">
-            <a class="contact-item" href="tel:+380662175991">
-              <span class="contact-icon phone-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.6 3.5 9.2 3c.7-.1 1.3.3 1.5 1l1.1 3.1c.2.5 0 1.1-.4 1.4L9.7 10a13.2 13.2 0 0 0 4.3 4.3l1.5-1.7c.4-.4.9-.6 1.4-.4l3.1 1.1c.7.2 1.1.8 1 1.5l-.5 2.6c-.1.7-.7 1.2-1.4 1.2C11.2 18.6 5.4 12.8 5.4 5c0-.7.5-1.3 1.2-1.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-              <span>+380 66 217 59 91</span>
-            </a>
+    <!-- ============ FORMAT ============ -->
+    <section class="section section--paper" id="format">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow" data-reveal><b>05</b> Формат</p>
+            <h2 class="display h2" data-reveal style="--d:1">Як проходить<br><span class="pink">навчання.</span></h2>
+          </div>
+          <p class="muted section-head__note" data-reveal style="--d:2">
+            Усе навчання — в одному Telegram-боті. Нічого не потрібно встановлювати: уроки, тести та завдання завжди під рукою.
+          </p>
+        </div>
 
-            <a class="contact-item" href="https://t.me/sofaaaaab" target="_blank" rel="noopener">
-              <span class="contact-icon telegram-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="12" fill="#2AABEE"/>
-                  <path d="m17.7 6.8-2.2 10.3c-.2.7-.6.9-1.2.6l-3.3-2.5-1.6 1.5c-.2.2-.4.4-.8.4l.3-3.4 6.2-5.6c.3-.3-.1-.4-.5-.1L6.9 13l-3.2-1c-.7-.2-.7-.7.1-1l12.5-4.9c.6-.2 1.6.1 1.4.7Z" fill="#fff"/>
-                </svg>
-              </span>
-              <span>@sofaaaaab</span>
-            </a>
+        <ol class="steps">
+          <li class="step" data-reveal style="--d:0">
+            <span class="step__icon"><svg><use href="#i-card"/></svg></span>
+            <span class="step__num">Крок 01</span>
+            <h3>Оплата</h3>
+            <p>Оплачуєш курс карткою на захищеній сторінці WayForPay.</p>
+          </li>
+          <li class="step" data-reveal style="--d:1">
+            <span class="step__icon"><svg><use href="#i-send"/></svg></span>
+            <span class="step__num">Крок 02</span>
+            <h3>Доступ у Telegram</h3>
+            <p>Отримуєш доступ до навчального Telegram-бота з усіма матеріалами.</p>
+          </li>
+          <li class="step" data-reveal style="--d:2">
+            <span class="step__icon"><svg><use href="#i-video"/></svg></span>
+            <span class="step__num">Крок 03</span>
+            <h3>Уроки та практика</h3>
+            <p>Дивишся уроки, проходиш тести й виконуєш домашні завдання прямо з телефона.</p>
+          </li>
+          <li class="step" data-reveal style="--d:3">
+            <span class="step__icon"><svg><use href="#i-chat"/></svg></span>
+            <span class="step__num">Крок 04</span>
+            <h3>7 днів підтримки</h3>
+            <p>Отримуєш супровід і відповіді на свої запитання, поки проходиш курс.</p>
+          </li>
+        </ol>
 
-            <a class="contact-item" href="https://www.instagram.com/sofia.bugrova_/" target="_blank" rel="noopener">
-              <span class="contact-icon instagram-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="igGradient" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#FFD600"/>
-                      <stop offset=".42" stop-color="#FF7A00"/>
-                      <stop offset=".7" stop-color="#E1306C"/>
-                      <stop offset="1" stop-color="#833AB4"/>
-                    </linearGradient>
-                  </defs>
-                  <rect width="24" height="24" rx="7" fill="url(#igGradient)"/>
-                  <rect x="6" y="6" width="12" height="12" rx="3.5" fill="none" stroke="#fff" stroke-width="1.7"/>
-                  <circle cx="12" cy="12" r="3" fill="none" stroke="#fff" stroke-width="1.7"/>
-                  <circle cx="16.7" cy="7.5" r="1" fill="#fff"/>
-                </svg>
-              </span>
-              <span>@sofia.bugrova_</span>
+        <div class="needs" data-reveal>
+          <p class="needs__title">Що знадобиться</p>
+          <ul class="needs__list">
+            <li><svg><use href="#i-phone"/></svg><div><b>Смартфон</b><span>iPhone чи Android — підійде будь-який сучасний</span></div></li>
+            <li><svg><use href="#i-sliders"/></svg><div><b>Безкоштовні застосунки</b><span>для зйомки та монтажу — покажемо, які саме</span></div></li>
+            <li><svg><use href="#i-spark"/></svg><div><b>Бажання пробувати</b><span>усе інше — в уроках курсу</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICE ============ -->
+    <section class="section section--dark price-section" id="price">
+      <div class="container price-grid">
+        <div class="price-grid__main">
+          <p class="eyebrow" data-reveal><b>06</b> Вартість</p>
+          <h2 class="display h2" data-reveal style="--d:1">Почни<br><span class="pink">зараз.</span></h2>
+
+          <div class="offer-card" data-reveal style="--d:2">
+            <div class="offer-card__top">
+              <span class="chip">Повний доступ</span>
+              <span class="chip chip--pink">Акція −80%</span>
+            </div>
+
+            <ul class="checklist">
+              <li><svg><use href="#i-check"/></svg>6 відеоуроків — від зйомки до перших замовлень</li>
+              <li><svg><use href="#i-check"/></svg>Тести після кожного уроку</li>
+              <li><svg><use href="#i-check"/></svg>Домашні завдання для практики</li>
+              <li><svg><use href="#i-check"/></svg>Навчання в зручному Telegram-боті</li>
+              <li><svg><use href="#i-check"/></svg>7 днів супроводу та відповідей на запитання</li>
+            </ul>
+
+            <div class="offer-card__bottom">
+              <div class="offer-card__price">
+                <s>4490 ₴</s>
+                <b>890 ₴</b>
+              </div>
+              <div class="timer timer--compact" aria-label="Час до завершення акції">
+                <span class="timer__label">Ціна діє ще</span>
+                <span class="timer__value" data-timer-seg>
+                  <span><b data-d>00</b><i>дн</i></span>
+                  <span><b data-h>00</b><i>год</i></span>
+                  <span><b data-m>00</b><i>хв</i></span>
+                  <span><b data-s>00</b><i>с</i></span>
+                </span>
+              </div>
+            </div>
+
+            <a class="btn btn--pink btn--lg btn--block" href="https://secure.wayforpay.com/payment/_sooffffaaaaa._" target="_blank" rel="noopener">
+              Отримати курс за 890 ₴ <svg class="btn__icon"><use href="#i-arrow"/></svg>
+            </a>
+            <p class="secure"><svg><use href="#i-lock"/></svg>Безпечна оплата карткою через WayForPay</p>
+          </div>
+        </div>
+
+        <div class="price-grid__phone" data-reveal style="--d:2">
+          <div class="phone-stage">
+            <span class="phone-stage__ring phone-stage__ring--1" aria-hidden="true"></span>
+            <span class="phone-stage__ring phone-stage__ring--2" aria-hidden="true"></span>
+            <div class="phone">
+              <span class="phone__island" aria-hidden="true"></span>
+              <div class="phone__screen">
+                <video class="phone__video" playsinline preload="metadata" data-video aria-label="Відео про курс «Мобільний відеомейкер»">
+                  <source src="images/course-video.mp4#t=0.1" type="video/mp4">
+                  Ваш браузер не підтримує відтворення відео.
+                </video>
+                <button class="play" type="button" data-play aria-label="Відтворити відео про курс">
+                  <span class="play__btn"><svg><use href="#i-play"/></svg></span>
+                  <span class="play__label">Дивись відео про курс</span>
+                </button>
+              </div>
+            </div>
+            <span class="float-chip float-chip--a" aria-hidden="true"><span class="rec-dot"></span>REC · 4K</span>
+            <span class="float-chip float-chip--b" aria-hidden="true">9:16 · Reels</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section--paper" id="faq">
+      <div class="container faq">
+        <div class="faq__aside">
+          <p class="eyebrow" data-reveal><b>07</b> FAQ</p>
+          <h2 class="display h2" data-reveal style="--d:1">Часті<br><span class="pink">запитання.</span></h2>
+          <div class="ask" data-reveal style="--d:2">
+            <p>Не знайшли відповідь? Напишіть — відповімо особисто.</p>
+            <a class="btn btn--dark" href="https://t.me/sofaaaaab" target="_blank" rel="noopener">
+              <svg class="btn__icon btn__icon--tg"><use href="#i-tg"/></svg> Написати в Telegram
             </a>
           </div>
+        </div>
+
+        <div class="faq__list" data-reveal style="--d:1">
+          <details class="faq-item" name="faq" open>
+            <summary>Чи підійде курс новачку?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <p>Так. Курс побудований як послідовний старт у мобільному відеомейкінгу: від налаштувань камери до готового ролика. Попередній досвід не потрібен.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Скільки уроків у курсі?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <p>6 уроків. Після кожного — тест і домашнє завдання, щоб одразу закріпити навик на практиці.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Де проходить навчання?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <p>У Telegram-боті: там зібрані уроки, тести та домашні завдання. Нічого додатково встановлювати не потрібно — достатньо Telegram на телефоні.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Чи буде підтримка?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <p>Так, передбачено 7 днів супроводу: можна ставити запитання та отримувати зворотний зв'язок.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Який телефон потрібен?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <p>Будь-який сучасний смартфон — iPhone або Android. Дорога камера, стабілізатор чи професійне світло не обов'язкові.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Як оплатити курс?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <p>Карткою на захищеній платіжній сторінці WayForPay — кнопка «Отримати курс» веде одразу туди. Якщо виникнуть питання з оплатою, пишіть у Telegram <a href="https://t.me/sofaaaaab" target="_blank" rel="noopener">@sofaaaaab</a>.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>До якого числа діє ціна 890 ₴?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <p>Акційна ціна діє до 31 жовтня включно. Після завершення акції вартість курсу може змінитися.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Чи зможу я заробляти після курсу?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <p>Курс дає базу й розуміння, як упакувати навик у портфоліо та знайти перші замовлення. Результат залежить від твоєї практики та регулярності.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="final" data-final>
+      <div class="vf vf--final" aria-hidden="true">
+        <i class="vf__c vf__c--tl"></i><i class="vf__c vf__c--tr"></i><i class="vf__c vf__c--bl"></i><i class="vf__c vf__c--br"></i>
+        <div class="vf__hud vf__hud--tl"><span class="rec-dot"></span>REC</div>
+        <div class="vf__hud vf__hud--tr">CUT · TAKE 01</div>
+      </div>
+
+      <div class="container final__inner">
+        <h2 class="display final__title" data-reveal>Можна ще<br><span class="pink">дивитися.</span></h2>
+        <p class="final__sub" data-reveal style="--d:1">А можна <span class="pink">вже почати знімати.</span></p>
+        <a class="btn btn--pink btn--xl" href="https://secure.wayforpay.com/payment/_sooffffaaaaa._" target="_blank" rel="noopener" data-reveal style="--d:2">
+          Хочу на курс за 890 ₴ <svg class="btn__icon"><use href="#i-arrow"/></svg>
+        </a>
+        <p class="final__note" data-reveal style="--d:3">Акційна ціна діє ще <b data-timer>11д 00:00:00</b></p>
+
+        <div class="final__contacts" data-reveal style="--d:4">
+          <p class="final__contacts-title">Контакти</p>
+          <ul class="contacts contacts--center">
+            <li><a class="contact" href="tel:+380662175991"><svg class="contact__icon contact__icon--call"><use href="#i-call"/></svg>+380 66 217 59 91</a></li>
+            <li><a class="contact" href="https://t.me/sofaaaaab" target="_blank" rel="noopener"><svg class="contact__icon"><use href="#i-tg"/></svg>@sofaaaaab</a></li>
+            <li><a class="contact" href="https://www.instagram.com/sofia.bugrova_/" target="_blank" rel="noopener"><svg class="contact__icon"><use href="#i-ig"/></svg>@sofia.bugrova_</a></li>
+          </ul>
         </div>
       </div>
     </section>
   </main>
 
-  <script>
-    // Акція діє до 31.10.2026, 23:59:59 за київським часом (UTC+2 на цю дату).
-    const promoDeadline = new Date('2026-10-31T21:59:59Z').getTime();
-    const promoTimer = document.getElementById('promoTimer');
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a class="logo logo--sm" href="#top"><span class="logo__rec" aria-hidden="true"></span><span>МВ<span class="logo__dot">.</span></span></a>
+      <p>© <span data-year>2026</span> «Мобільний відеомейкер». Онлайн міні-курс мобільного відеомейкінгу.</p>
+      <a class="footer__top" href="#top">Нагору <svg class="btn__icon btn__icon--up"><use href="#i-down"/></svg></a>
+    </div>
+  </footer>
 
-    function updatePromoTimer() {
-      const diff = Math.max(0, promoDeadline - Date.now());
-      const totalSeconds = Math.floor(diff / 1000);
-      const days = Math.floor(totalSeconds / 86400);
-      const hours = Math.floor((totalSeconds % 86400) / 3600);
-      const minutes = Math.floor((totalSeconds % 3600) / 60);
-      const seconds = totalSeconds % 60;
+  <!-- Мобільна закріплена кнопка -->
+  <div class="sticky-cta" data-sticky-cta>
+    <div class="sticky-cta__price">
+      <b>890 ₴</b>
+      <span><s>4490 ₴</s> · <span data-timer>11д 00:00:00</span></span>
+    </div>
+    <a class="btn btn--pink btn--sm" href="https://secure.wayforpay.com/payment/_sooffffaaaaa._" target="_blank" rel="noopener">
+      Купити <svg class="btn__icon"><use href="#i-arrow"/></svg>
+    </a>
+  </div>
 
-      if (diff <= 0) {
-        promoTimer.textContent = 'АКЦІЯ ЗАКІНЧИЛАСЯ';
-        return;
-      }
-
-      promoTimer.textContent = `${days}д ${String(hours).padStart(2,'0')}:${String(minutes).padStart(2,'0')}:${String(seconds).padStart(2,'0')}`;
-    }
-
-    updatePromoTimer();
-    setInterval(updatePromoTimer, 1000);
-  </script>
+  <script src="script.js" defer></script>
 </body>
 </html>
