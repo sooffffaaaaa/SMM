@@ -122,19 +122,18 @@
   onScroll();
 
   /* ---------- Активний пункт меню ---------- */
+  // Спостерігаємо за всіма секціями: для тих, яких немає в меню, підсвітка знімається.
   const navLinks = [...document.querySelectorAll('.nav__links a')];
-  const sectionsById = navLinks
-    .map((a) => document.querySelector(a.getAttribute('href')))
-    .filter(Boolean);
-  if ('IntersectionObserver' in window && sectionsById.length) {
+  const allSections = document.querySelectorAll('main > section');
+  if ('IntersectionObserver' in window && navLinks.length) {
     const navIO = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        const id = `#${entry.target.id}`;
+        const id = entry.target.id ? `#${entry.target.id}` : '';
         navLinks.forEach((a) => a.classList.toggle('is-current', a.getAttribute('href') === id));
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    sectionsById.forEach((s) => navIO.observe(s));
+    allSections.forEach((s) => navIO.observe(s));
   }
 
   /* ---------- Поява блоків ---------- */
@@ -210,6 +209,46 @@
       playBtn.classList.remove('is-hidden');
       video.controls = false;
     });
+  }
+
+  /* ---------- До / Після ---------- */
+  const ba = document.querySelector('[data-ba]');
+  const baRange = document.querySelector('[data-ba-range]');
+  if (ba && baRange) {
+    const setPos = (v) => {
+      ba.style.setProperty('--pos', `${v}%`);
+      baRange.value = v;
+    };
+    baRange.addEventListener('input', () => setPos(baRange.value));
+    setPos(50);
+
+    // Підказка: при першій появі повзунок коротко «гойдається» туди-сюди.
+    if (!reduceMotion && 'IntersectionObserver' in window) {
+      let touched = false;
+      baRange.addEventListener('pointerdown', () => { touched = true; }, { once: true });
+      const keys = [[0, 50], [700, 74], [1500, 28], [2200, 50]];
+      const hintIO = new IntersectionObserver(([e]) => {
+        if (!e.isIntersecting) return;
+        hintIO.disconnect();
+        setTimeout(() => {
+          const start = performance.now();
+          const step = (now) => {
+            if (touched) return;
+            const t = now - start;
+            const i = keys.findIndex(([k]) => k > t);
+            if (i === -1) { setPos(50); return; }
+            const [t0, v0] = keys[i - 1];
+            const [t1, v1] = keys[i];
+            const p = (t - t0) / (t1 - t0);
+            const eased = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+            setPos(v0 + (v1 - v0) * eased);
+            requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+        }, 700);
+      }, { threshold: 0.5 });
+      hintIO.observe(ba);
+    }
   }
 
   /* ---------- Рік у футері ---------- */
