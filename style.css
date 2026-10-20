@@ -1716,6 +1716,11 @@ s { text-decoration-thickness: 2px; }
   .timer__value > span { padding: 6px 8px; }
 }
 
+@media (max-width: 400px) {
+  .vf__hud--tr { display: none; }
+  .hero__content .eyebrow { font-size: 11px; letter-spacing: .12em; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
